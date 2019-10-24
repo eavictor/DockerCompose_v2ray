@@ -1,0 +1,42 @@
+{
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": " >>> !!! SERVER IP/DOMAIN !!! <<< ",
+            "port": 8888,
+            "users": [
+              {
+                "id": " >>> !!! INPUT UUID HERE !!! <<< ",
+                "alterId": 64
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "inbounds": [
+    {
+      "protocol": "socks",
+      "port": 1080,
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "auth": "password",
+        "accounts": [
+          {
+            "user": " >>> !!! USERNAME !!! <<< ",
+            "pass": " >>> !!! PASSWORD !!! <<< "
+          }
+        ],
+        "udp": false,
+        "userLevel": 0
+      }
+    }
+  ]
+}

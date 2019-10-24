@@ -1,0 +1,15 @@
+version: "3.7"
+
+
+services:
+  v2ray:
+    image: v2ray/official:latest
+    restart: always
+    volumes:
+      - type: bind
+        source: /home/DockerCompose_v2ray/server/config.json
+        target: /etc/v2ray/config.json
+    ports:
+      - "8888:8888"
+      - "10000-20000:10000-20000"
+    command: ["v2ray", "-config=/etc/v2ray/config.json"]
