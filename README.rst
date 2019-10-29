@@ -11,15 +11,15 @@ General Setup
     .. code-block:: shell
 
         cd /home
-        git clone https://github.com/eavictor/DockerCompose_v2ray.git
+        sudo git clone https://github.com/eavictor/DockerCompose_v2ray.git
 
     2. Install docker and add user to docker group
 
     .. code-block:: shell
 
         cd ./DockerCompose_v2ray
-        chmod +x ./install_docker.sh
-        ./install_docker.sh <username(optional)>
+        sudo chmod +x ./install_docker.sh
+        sudo ./install_docker.sh <username(optional)>
 
 ------------
 Server Setup
@@ -36,7 +36,7 @@ Server Setup
 
     .. code-block:: shell
 
-        docker-compose -f docker-compose.yml up -d
+        sudo docker-compose -f docker-compose.yml up -d
 
 ------------
 Client Setup
@@ -53,4 +53,4 @@ Client Setup
 
     .. code-block:: shell
 
-        docker-compose -f docker-compose.yml up -d
+        sudo docker-compose -f docker-compose.yml up -d
